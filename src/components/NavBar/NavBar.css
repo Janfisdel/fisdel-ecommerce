@@ -1,0 +1,4 @@
+.bg-color {
+    --bs-bg-opacity: 1;
+    background-color: lightpink;
+}
