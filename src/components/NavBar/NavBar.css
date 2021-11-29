@@ -1,4 +1,7 @@
-.bg-color {
-    --bs-bg-opacity: 1;
+.navbar{
+    background-color: lightpink;
+}
+
+.dropdown-menu{
     background-color: lightpink;
 }

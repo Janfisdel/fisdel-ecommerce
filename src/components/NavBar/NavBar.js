@@ -1,17 +1,19 @@
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
+import logo from '../../logo.jpg'
 import Nav from 'react-bootstrap/Nav'
+import NavDropdown  from 'react-bootstrap/NavDropdown'
 import './NavBar.css';
+import CartWidget from './CartWidget';
 
 
-// Cambiar por NavBar con logo. ponerle las secciones deseadas para el primer desafio cambiar favicon por mi logo
-const NavBar = () => {
+function NavBar () {
     return (
-        <Navbar bg="color" expand="lg">
+        <Navbar  expand="lg">
         <Container fluid>
         <img
           alt="logo"
-          src="public/logo.jpg"
+          src={logo}
           width="30"
           height="30"
           className="d-inline-block align-top"
@@ -24,11 +26,16 @@ const NavBar = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Productos</Nav.Link>
-              <Nav.Link href="#action3">Contacto</Nav.Link>
+              <NavDropdown title="Productos" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/1.1">Cerveza</NavDropdown.Item>
+                <NavDropdown.Item href="#action/1.2">Vino</NavDropdown.Item>
+                <NavDropdown.Item href="#action/1.3">Gaseosa</NavDropdown.Item>
+          
+                </NavDropdown>
+              <Nav.Link href="#action2">Contacto</Nav.Link>
               
             </Nav>
+            <CartWidget/>
           </Navbar.Collapse>
         </Container>
       </Navbar>
