@@ -16,7 +16,7 @@ function ItemCount({stock, initial}) {
 
 
     const onAdd =()=>{
-        alert('Producto agregado')
+        alert("se agregaron " + value + " productos al carrito")
         setValue(initial)
     }
 
