@@ -8,7 +8,7 @@ function App() {
     <div className="App">
      
        <NavBar/>
-       <ItemListContainer greeting='Soy ItemListContainer desde App.js'/>
+       <ItemListContainer greeting='Al aire! Bienvenidos a nuestra tienda '/>
        
      </div>
 

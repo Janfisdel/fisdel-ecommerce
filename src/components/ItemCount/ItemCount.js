@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import './ItemCount.css';
 
 function ItemCount({stock, initial}) {
 
@@ -14,17 +15,19 @@ function ItemCount({stock, initial}) {
     }
 
 
-    //ESTA ES LA CONSULTA QUE TENGO SOBRE LA FUNCION onADD
     const onAdd =()=>{
-        alert("Producto agregado")
+        alert('Producto agregado')
+        setValue(initial)
     }
 
     return (
         <div>
         <p>{value}</p>    
-        <button onClick={()=>handleSuma(1)}>+</button>
-        <button onClick={()=>handleResta(1)}>-</button>
-        <button onClick={onAdd}>Agregar al carrito</button>
+        
+        <div><button className="button-count" onClick={()=>handleSuma(1)}>+</button>
+        <button className="button-count" onClick={()=>handleResta(1)}>-</button>
+        </div>
+        <button className="button-count" onClick={onAdd}>Agregar al carrito</button>
         
         </div>
     )
