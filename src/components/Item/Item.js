@@ -2,7 +2,6 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
-import ItemCount from '../ItemCount/ItemCount'
 
 function Item({prod}) {
     return (
@@ -16,8 +15,7 @@ function Item({prod}) {
                                                              </Card.Body>
                                                             <ListGroup className="list-group-flush">
                                                                 <ListGroupItem>$ {prod.precio}</ListGroupItem>
-                                                                <ListGroupItem> <ItemCount  stock ={10} initial={1} /></ListGroupItem>
-                                                               
+                                                                                                                              
                                                             </ListGroup>
                                                             
                                                        </Card></div>

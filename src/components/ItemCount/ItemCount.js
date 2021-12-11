@@ -15,10 +15,11 @@ function ItemCount({stock, initial}) {
     }
 
 
-    const onAdd =()=>{
-        alert("se agregaron " + value + " productos al carrito")
+    const onAdd = () => {
+        const message = `Agregaste ${value} producto`;
+        value === 1 ? alert(message) : alert(`${message}s`);
         setValue(initial)
-    }
+      };
 
     return (
         <div>
