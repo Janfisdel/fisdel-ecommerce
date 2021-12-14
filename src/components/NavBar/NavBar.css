@@ -1,7 +1,25 @@
-.navbar{
-    background-color: lightpink;
+.navbar {
+  background-color: lightpink;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
 }
 
-.dropdown-menu{
-    background-color: lightpink;
+.dropdown-menu {
+  background-color: lightpink;
+}
+
+.navLink {
+  padding: 0 1rem;
+  text-decoration: none;
+  color: black;
+}
+.navLink:hover {
+  color: black;
+}
+
+.active {
+  font-weight: bold;
+  background-color: rgb(238, 149, 162);
+  border-radius: 20px;
 }

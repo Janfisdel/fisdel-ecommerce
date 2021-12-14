@@ -6,14 +6,14 @@ function ItemDetail({item}) {
   
     
     return (
-        <div className='divDetail' key={item.id}>
+        <div key={item.id}>
             <p> Producto: {item.nombre}</p>
             <p> Descripcion: {item.descripcion}</p>
             <p>
                  <img className='imgDetail' src={item.img} alt={item.alt} />
             </p>
             <p>precio: ${item.precio}</p>
-             <p> <ItemCount  stock ={10} initial={1} />
+             <p> <ItemCount  stock ={item.stock} initial={1} />
             </p>
            
         </div>
