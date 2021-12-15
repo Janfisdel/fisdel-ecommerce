@@ -1,4 +1,4 @@
-# Al aire - Tienda de bebidas
+# Al aire! - Tienda de bebidas
 E-commerce project for React JS course at Coder House
 
 # Getting Started with Create React App
