@@ -1,7 +1,7 @@
 import {NavLink} from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-import logo from '../../IMG/logo.jpg'
+// import logo from '../../IMG/logo.jpg'
 import Nav from 'react-bootstrap/Nav'
 import './NavBar.css';
 import CartWidget from './CartWidget';
@@ -14,7 +14,7 @@ function NavBar () {
           <Nav>
             <NavLink className="navLink" to="/"><img
                                                        alt="logo"
-                                                       src={logo}
+                                                       src={'https://res.cloudinary.com/janfis/image/upload/v1639865062/React%20JS%20-%20e%20commerce/logo_q8crhx.jpg'}
                                                        width="30"
                                                        height="30"
                                                        className="d-inline-block align-top"
