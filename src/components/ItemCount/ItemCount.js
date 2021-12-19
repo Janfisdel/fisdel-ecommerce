@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './ItemCount.css';
 
-function ItemCount({stock, initial}) {
+function ItemCount({stock, initial, onAdd}) {
 
 
     const [value, setValue] = useState(initial)
@@ -14,13 +14,6 @@ function ItemCount({stock, initial}) {
         value > initial ? setValue(estadoPrevio => estadoPrevio - valor) : console.log('compra minima posible')
     }
 
-
-    const onAdd = () => {
-        const message = `Agregaste ${value} producto`;
-        value === 1 ? alert(message) : alert(`${message}s`);
-        setValue(initial)
-      };
-
     return (
         <div>
         <p>{value}</p>    
@@ -28,7 +21,7 @@ function ItemCount({stock, initial}) {
         <div><button className="button-count" onClick={()=>handleSuma(1)}>+</button>
         <button className="button-count" onClick={()=>handleResta(1)}>-</button>
         </div>
-        <button className="button-count" onClick={onAdd}>Agregar al carrito</button>
+        <button className="button-count" onClick={()=>onAdd(value)}>Agregar al carrito</button>
         
         </div>
     )

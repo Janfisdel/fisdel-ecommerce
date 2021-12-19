@@ -3,3 +3,13 @@
   height: 18rem;
   border-radius: 3rem;
 }
+
+.button-cart {
+  width: 13rem;
+  height: 5rem;
+  background-color: lightpink;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+  
