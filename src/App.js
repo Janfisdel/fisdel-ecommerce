@@ -3,11 +3,13 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart'
+import CartContextProvider from './context/CartContext';
 import './App.css';
 
 
 function App() {
   return (
+    <CartContextProvider>
     <BrowserRouter>
         <div className="App">
             <NavBar/>
@@ -34,6 +36,7 @@ function App() {
             </Routes>
         </div>
     </BrowserRouter>
+   </CartContextProvider>
   );
 }
 

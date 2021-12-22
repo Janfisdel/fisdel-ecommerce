@@ -1,0 +1,20 @@
+
+.button-vaciar {
+    width: 8rem;
+    height: 2rem;
+    background-color: lightpink;
+    border-radius: 10px;
+    font-weight: bold;
+    
+  }
+  
+.trash{
+  color:rgb(226, 135, 148);
+  width: 2rem;
+  height:2rem;
+}
+.trash:hover {
+  color:rgba(0, 0, 0, 0.527);
+  background-color: lightpink;
+  border-radius: 25%;
+}
