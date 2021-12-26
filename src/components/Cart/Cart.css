@@ -1,20 +1,48 @@
-
-.button-vaciar {
-    width: 8rem;
-    height: 2rem;
-    background-color: lightpink;
-    border-radius: 10px;
-    font-weight: bold;
-    
-  }
-  
-.trash{
+ .eliminarItem{
   color:rgb(226, 135, 148);
   width: 2rem;
   height:2rem;
 }
-.trash:hover {
+.eliminarItem:hover {
   color:rgba(0, 0, 0, 0.527);
   background-color: lightpink;
   border-radius: 25%;
+}
+
+.enlaceContinuar{
+ font-size: 1.5rem;
+  font-weight: bold;
+  color:rgb(238, 113, 132);
+
+  padding: 0 10px
+}
+
+.enlaceContinuar:hover{
+  color:black;
+  background-color: lightpink;
+  border-radius: 30px;
+}
+
+.button-vaciar {
+  width: 8rem;
+  height: 2rem;
+  background-color: lightpink;
+  border-radius: 10px;
+  font-weight: bold;
+  
+}
+.button-vaciar:hover{
+  background-color: black;
+  color:lightpink;
+}
+
+.button-Finalizar{
+  background-color: lightpink;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.button-Finalizar:hover{
+  background-color: black;
+  color:lightpink;
 }
