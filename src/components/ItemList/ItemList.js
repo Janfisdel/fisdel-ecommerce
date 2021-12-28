@@ -6,8 +6,6 @@ function ItemList({productos}) {
     return (
         <div className="productGrid">
         {productos.map((prod)=> <Item prod={prod} />)        }
-        
-        
         </div>
     )
 }

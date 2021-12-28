@@ -36,13 +36,3 @@
   color:lightpink;
 }
 
-.button-Finalizar{
-  background-color: lightpink;
-  font-weight: bold;
-  border-radius: 10px;
-}
-
-.button-Finalizar:hover{
-  background-color: black;
-  color:lightpink;
-}

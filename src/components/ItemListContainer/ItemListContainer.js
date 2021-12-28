@@ -35,7 +35,6 @@ function ItemListContainer({greeting}) {
 
 
     
-    console.log(productos)
     return (
         <main className ="container">
             <h1>{greeting}</h1>

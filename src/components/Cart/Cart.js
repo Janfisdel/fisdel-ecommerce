@@ -16,8 +16,8 @@ function Cart() {
                                           </li>)}
                       
           {cartList.length === 0 ? <><p>El carrito se encuentra vacio <Link to="/" className="enlaceContinuar"> Continuar comprando</Link></p></>
-                                 : <div><p>Cantidad total de productos: {sumarCantidades()} - precio total: ${sumarPrecios()}</p>
-                                        <button className="button-Finalizar">Finalizar compra</button>
+                                 : <div><p>Cantidad total de productos: {sumarCantidades()}</p> 
+                                        <p> Precio total: ${sumarPrecios()}</p>
                                         <button className="button-vaciar" onClick={borrarCarrito}>Vaciar Carrito</button>
                                     </div>}
           
