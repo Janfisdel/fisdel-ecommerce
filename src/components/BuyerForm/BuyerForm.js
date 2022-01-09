@@ -66,19 +66,16 @@ function BuyerForm() {
               <input type="text" name="phone" placeholder="Telefono" value= {dataForm.phone} required /><br />
               <input type="email" name="email" placeholder="Ingrese su correo electronico" value={dataForm.email} required /><br />
               
-           {cartList.length !== 0 
-           ? <button class="buttonForm">Generar orden</button> 
-            : <button class="buttonForm" disabled>Generar orden</button> }
-            
-            {idOrder.length !== 0 && <> <p>Compra finalizada. La orden es {idOrder}</p>
-                                    <p><Link to="/" className="enlaceContinuar"> Realizar otra  compra </Link></p> </>}
-
-
+              {cartList.length !== 0 
+                  ? <><button className="buttonForm">Generar orden</button> 
+                    <Link to="/cart"><button className="buttonForm">Volver al carrito</button></Link></>
+                  : <button className="buttonForm" disabled>Generar orden</button> }
 
 
           </form>
                
-            
+            {idOrder.length !== 0 && <> <p>Compra finalizada. La orden es {idOrder}</p>
+                                    <p><Link to="/" className="enlaceContinuar"> Realizar otra  compra </Link></p> </>}
        
         </div>
     )
