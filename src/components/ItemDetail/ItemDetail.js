@@ -25,7 +25,7 @@ function ItemDetail({item}) {
             </p>
             <p>precio: ${item.precio}</p>
               {irCarrito ? <ItemCount  stock ={item.stock} initial={1} onAdd={onAdd}/> 
-                         :<Link to="/cart"><button className="button-cart">Finalizar Compra</button></Link>
+                         :<Link to="/cart"><button className="button-cart">Ir al carrito</button></Link>
                    }
             
            

@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart'
+import BuyerForm from './components/BuyerForm/BuyerForm';
 import CartContextProvider from './context/CartContext';
 import './App.css';
 
@@ -32,7 +33,14 @@ function App() {
               <Route 
                 exact 
                 path="/cart"
-                element={<Cart />} />
+                element={<Cart />} 
+              />
+              <Route 
+                exact
+                path="/BuyerForm"
+                element={<BuyerForm/>}
+                />
+
             </Routes>
         </div>
     </BrowserRouter>

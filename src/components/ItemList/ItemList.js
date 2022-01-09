@@ -5,7 +5,8 @@ import './ItemList.css';
 function ItemList({productos}) {
     return (
         <div className="productGrid">
-        {productos.map((prod)=> <Item prod={prod} />)        }
+            {/* PREGUNTAR SI ESTA BIEN LA KEY AHI SINO ME TIRA ERROR */}
+        {productos.map((prod)=> <Item key={prod.id} prod={prod} />)        }
         </div>
     )
 }

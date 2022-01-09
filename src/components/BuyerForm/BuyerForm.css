@@ -1,0 +1,12 @@
+.form {
+    margin-top:2rem;
+}
+
+.buttonForm {
+    width: auto;
+  height: 2rem;
+  background-color: lightpink;
+  border-radius: 10px;
+  font-weight: bold;
+  
+}
