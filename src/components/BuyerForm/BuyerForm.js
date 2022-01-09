@@ -60,7 +60,7 @@ function BuyerForm() {
         <div className ="container">
             <h1>Formulario de compra</h1>
             
-            <form class="form" onSubmit={generarOrden}
+            <form className="form" onSubmit={generarOrden}
                onChange={handlerChange}>
               <input type="text" name="name" placeholder="Nombre"  value={dataForm.name} required /> <br />
               <input type="text" name="phone" placeholder="Telefono" value= {dataForm.phone} required /><br />

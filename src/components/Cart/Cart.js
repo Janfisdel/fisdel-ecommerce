@@ -26,7 +26,7 @@ function Cart() {
                                  : <div><p>Cantidad total de productos: {sumarCantidades()}</p> 
                                         <p> Precio total: ${sumarPrecios()}</p>
                                         <button className="button-vaciar" onClick={borrarCarrito}>Vaciar Carrito</button>
-                                        <Link to="/BuyerForm"><button className="button-vaciar" >Finalizar Compra</button></Link>
+                                        <Link to="/buyerForm"><button className="button-vaciar" >Finalizar Compra</button></Link>
                                     </div>}
           
           

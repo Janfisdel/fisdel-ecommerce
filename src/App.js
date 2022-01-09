@@ -37,7 +37,7 @@ function App() {
               />
               <Route 
                 exact
-                path="/BuyerForm"
+                path="/buyerForm"
                 element={<BuyerForm/>}
                 />
 
