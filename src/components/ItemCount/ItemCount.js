@@ -1,30 +1,32 @@
 import React, {useState} from 'react';
 import './ItemCount.css';
+import Button from '../Button/Button';
 
 function ItemCount({stock, initial, onAdd}) {
 
 
     const [value, setValue] = useState(initial)
 
-    const handleSuma = (valor)=>{
-        value < stock ? setValue(previo => previo+ valor): console.log('compra maxima posible')
+    const handleAddition = (plus)=>{
+        value < stock ? setValue(stateBefore=> stateBefore + plus): console.log('compra maxima posible')
     }
 
-    const handleResta =(valor)=>{
-        value > initial ? setValue(estadoPrevio => estadoPrevio - valor) : console.log('compra minima posible')
+    const handleSubtraction =(minus)=>{
+        value > initial ? setValue( stateBefore => stateBefore - minus) : console.log('compra minima posible')
     }
 
     return (
-        <div>
-        <p>{value}</p>    
-        
-        <div><button className="button-count" onClick={()=>handleSuma(1)}>+</button>
-        <button className="button-count" onClick={()=>handleResta(1)}>-</button>
+        <>
+            <div className='divCount'>
+        <p  className='pCount' onClick={()=>handleAddition(1)}><Button text='+'/></p> 
+        <p className='pCount'>{value}</p>  
+       
+        <p className='pCount' onClick={()=>handleSubtraction(1)}><Button text='-'/></p>
         </div>
-        <button className="button-count" onClick={()=>onAdd(value)}>Agregar al carrito</button>
         
-        </div>
+        <p className='pCount' onClick={()=>onAdd(value)}><Button  text='Agregar al carrito' / ></p>
+        
+        </>
     )
 }
-
 export default ItemCount

@@ -6,7 +6,7 @@
 .container{
   padding-top: 4rem;
 }
-/*Simulacion de carga de getFetch*/
+/* Simulacion de carga de getFetch
 .preCarga{
   margin:auto;
   width: 10rem;
@@ -27,4 +27,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

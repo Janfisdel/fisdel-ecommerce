@@ -4,12 +4,14 @@
   border-radius: 3rem;
 }
 
-.button-cart {
-  width: 8rem;
-  height: 4rem;
-  background-color: lightpink;
-  border-radius: 10px;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
+.divDetail {
+  display: flex;
+  justify-content: center;
+  border: lightpink solid;
+  padding:2rem;
   
+}
+
+.descriptionItem{
+  margin: 2rem;
+}

@@ -7,15 +7,15 @@ export const useCartContext = ()=>useContext(CartContext)
 function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
       
-    function agregarAlCarrito (item){
+    function addCart (item){
        //si el producto que agrego ya existe en el carrito, "indice" devuelve su posición, si no existe devuelve -1
-        const indice = cartList.findIndex(i=> i.id === item.id) 
+        const index = cartList.findIndex(i=> i.id === item.id) 
 
-        if(indice >-1){
+        if(index >-1){
             //si el producto existe se elimina del carrito y se vuelve a agregar sumando la cantidad anterior y la nueva
-            const cantPrevia = cartList[indice].cantidad
-            cartList.splice(indice,1)
-            setCartList([...cartList, {...item, cantidad:item.cantidad + cantPrevia}])
+            const quantPrev = cartList[index].quantity
+            cartList.splice(index,1)
+            setCartList([...cartList, {...item, quantity:item.quantity + quantPrev}])
             
         }else {
             //si el producto no existe solo se agrega al carrito
@@ -25,40 +25,40 @@ function CartContextProvider({children}) {
        
     } 
 
-    function borrarCarrito(){
+    function deleteCart(){
         setCartList([])
     }
 
-    function borrarItem(id){
+    function deleteItem(id){
        //Creo nuevo array con aquellos productos que no coincida el id con el del producto a eliminar
-         const cartSinItem = cartList.filter(prodEliminar=>prodEliminar.id !== id) 
-         setCartList(cartSinItem)
+         const cartNoItem = cartList.filter(prodDelete=>prodDelete.id !== id) 
+         setCartList(cartNoItem)
                 
     }
 
-    function sumarCantidades(){
-        const cantidadTotal = cartList.map(prod =>prod.cantidad).reduce((a,b)=>a+b)
+    function addQuantity(){
+        const totalQuantity = cartList.map(prod =>prod.quantity).reduce((a,b)=>a+b)
         return(
-            cantidadTotal
+            totalQuantity
         )
 
     }
-    function sumarPrecios(){
-        const precioTotal = cartList.map(prod=>prod.cantidad*prod.precio).reduce((a,b)=>a+b)
+    function addPrices(){
+        const totalPrice = cartList.map(prod=>prod.quantity*prod.price).reduce((a,b)=>a+b)
         
         return (
-            precioTotal
+            totalPrice
         )
     }
 
     return (
         <CartContext.Provider value={{   
         cartList,
-        agregarAlCarrito,
-        borrarCarrito,
-        borrarItem,
-        sumarCantidades,
-        sumarPrecios
+        addCart,
+        deleteCart,
+        deleteItem,
+        addQuantity,
+        addPrices
 
     }}>
         {children}

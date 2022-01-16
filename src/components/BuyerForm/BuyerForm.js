@@ -4,15 +4,13 @@ import {Link} from 'react-router-dom'
 import {addDoc, collection, getFirestore, Timestamp} from 'firebase/firestore'
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext"
+import Button from '../Button/Button'
 
 function BuyerForm() {
-    const {cartList, borrarCarrito, sumarPrecios} =useCartContext() 
-    
-
-
+    const {cartList, deleteCart, addPrices, addQuantity} =useCartContext() 
     const [idOrder, setidOrder] = useState("")
     const [dataForm, setDataForm] = useState({
-        name:"", phone:"", email:""
+        name:"", phone:"", email:"", emailConfirm:""
     })
  
     const handlerChange = (e)=>{
@@ -22,22 +20,25 @@ function BuyerForm() {
                      [e.target.name]:e.target.value})
     }
      console.log(dataForm)
-     //pasar esto a otro componente
+     //pasar esto a otro componente?
  
-     const generarOrden = (e)=>{
+     const generateOrder = (e)=>{
          e.preventDefault()
 
         let order= {}       
          order.date = Timestamp.fromDate(new Date())
          order.buyer= dataForm
-         order.total = sumarPrecios()
+         order.totalPrice = addPrices()
+         order.totalQuantity = addQuantity()
+
  
          order.items = cartList.map( cartItem =>{
              const id = cartItem.id;
-             const nombre = cartItem.nombre;
-             const precio = cartItem.precio * cartItem.cantidad
+             const name = cartItem.name;
+             const quantity = cartItem.quantity;
+             const price = cartItem.price * cartItem.quantity
  
-             return {id, nombre, precio}
+             return {id, name, quantity, price}
          })
          
  
@@ -48,8 +49,8 @@ function BuyerForm() {
          addDoc(orderCollection, order)
          .then(resp=>setidOrder(resp.id))
          .catch(err=> console.log(err))
-         .finally(()=>{borrarCarrito()
-             setDataForm({name:"", phone:"", email:""})}
+         .finally(()=>{deleteCart()
+             setDataForm({name:"", phone:"", email:"", emailConfirm:""})}
                      )
 
          
@@ -60,17 +61,24 @@ function BuyerForm() {
         <div className ="container">
             <h1>Formulario de compra</h1>
             
-            <form className="form" onSubmit={generarOrden}
+            <form className="form" onSubmit={generateOrder}
                onChange={handlerChange}>
-              <input type="text" name="name" placeholder="Nombre"  value={dataForm.name} required /> <br />
-              <input type="text" name="phone" placeholder="Telefono" value= {dataForm.phone} required /><br />
+              <input type="text" name="name" placeholder="Nombre"  pattern="[a-zA-ZñÑáéíóú'´ÁÉÍÓÚ ]{2,50}" value={dataForm.name} required /> <br />
+              <input type="text" name="phone" placeholder="Telefono" pattern="[0-9]{7,15}" value= {dataForm.phone} required /><br />
               <input type="email" name="email" placeholder="Ingrese su correo electronico" value={dataForm.email} required /><br />
+              <input type="email" name="emailConfirm" placeholder="Confirme su  correo electronico" value={dataForm.emailConfirm} required /><br></br>
               
-              {cartList.length !== 0 
-                  ? <><button className="buttonForm">Generar orden</button> 
-                    <Link to="/cart"><button className="buttonForm">Volver al carrito</button></Link></>
-                  : <button className="buttonForm" disabled>Generar orden</button> }
 
+
+                {/* VER COMO SEPARAR QUE SI HAY PRODUCTOS APAREZCA VOLVER AL CARRITO Y SI ADEMAS PONE EL MAIL PERMITA FINALIZAR */}
+              
+              {cartList.length !== 0 & dataForm.email !== "" & dataForm.email === dataForm.emailConfirm 
+                  ? <Button text='Terminar compra' />
+                //   <button className="buttonForm">Terminar compra</button> 
+                    
+                  : <p className='formIncomplete'>Por favor completar los campos obligatorios</p>
+                 
+                  } 
 
           </form>
                

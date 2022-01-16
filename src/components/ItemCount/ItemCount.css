@@ -1,4 +1,8 @@
-.button-count {
-  background-color: lightpink;
-  border-radius: 10px;
+.divCount{
+  display: flex;
+ justify-content: center;
+}
+
+.pCount{
+  margin: 0.5rem;
 }

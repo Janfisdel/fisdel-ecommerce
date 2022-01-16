@@ -21,10 +21,12 @@ function NavBar () {
                                                    />
                                                    Al Aire!
             </NavLink>
-            <NavLink to="/categoria/cerveza" className="navLink" activeclassname="active">Cerveza</NavLink>
-            <NavLink to="/categoria/vino" className="navLink" activeclassname="active">Vino</NavLink>
-            <NavLink to="/categoria/sin_alcohol" className="navLink" activeclassname="active">Sin Alcohol</NavLink>
-                          
+            <NavLink to="/category/beer" className="navLink" activeclassname="active">Cerveza</NavLink>
+            <NavLink to="/category/wine" className="navLink" activeclassname="active">Vino</NavLink>
+            <NavLink to="/category/noAlcohol" className="navLink" activeclassname="active">Sin Alcohol</NavLink>
+            <NavLink to="/category/appetizer" className="navLink" activeclassname="active">Aperitivos</NavLink>           
+            <NavLink to="/category/liquor" className="navLink" activeclassname="active">Bebidas blancas</NavLink>
+            <NavLink to="/category/others" className="navLink" activeclassname="active">Otros</NavLink>
             </Nav>
              <NavLink to="/cart" className="navLink"><CartWidget/></NavLink>
            

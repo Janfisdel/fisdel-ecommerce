@@ -1,0 +1,8 @@
+.button {
+    width: auto;
+    height:auto;
+    background:lightpink;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
