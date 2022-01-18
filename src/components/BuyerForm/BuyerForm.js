@@ -72,7 +72,7 @@ function BuyerForm() {
 
                 {/* VER COMO SEPARAR QUE SI HAY PRODUCTOS APAREZCA VOLVER AL CARRITO Y SI ADEMAS PONE EL MAIL PERMITA FINALIZAR */}
               
-              {cartList.length !== 0 & dataForm.email !== "" & dataForm.email === dataForm.emailConfirm 
+              {cartList.length !== 0 & dataForm.name !== "" & dataForm.phone !== "" & dataForm.email !== "" & dataForm.email === dataForm.emailConfirm 
                   ? <Button text='Terminar compra' />
                 //   <button className="buttonForm">Terminar compra</button> 
                     
