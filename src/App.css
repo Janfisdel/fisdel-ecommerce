@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
 }
 
@@ -6,25 +6,3 @@
 .container{
   padding-top: 4rem;
 }
-/* Simulacion de carga de getFetch
-.preCarga{
-  margin:auto;
-  width: 10rem;
-  height: 10rem;
-  border: 1rem solid #eee;
-  border-top: 1rem solid rgb(233, 142, 156);
-  border-radius: 50%;
-  animation-name: girar;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes girar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

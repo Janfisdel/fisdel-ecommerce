@@ -1,22 +1,22 @@
 .form {
+    margin:auto;
     margin-top:2rem;
+    padding:0 3rem;
+    text-align: right;
+    border: solid lightpink;
+    width: 50%;
 }
 
-/* .buttonForm {
-    width: auto;
-  height: 2rem;
-  background-color: lightpink;
-  border-radius: 10px;
+input{
+  margin:0.5rem;
+}
+
+.formIncomplete{
+  color:red;
   font-weight: bold;
   
 }
 
-.buttonForm:hover {
-  background-color: black;
-  color:lightpink;
-} */
-
-.formIncomplete{
-  color:red;
+.buttonForm{
+  text-align: center;
 }
-

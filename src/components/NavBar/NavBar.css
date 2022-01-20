@@ -9,6 +9,7 @@
   padding: 0 1rem;
   text-decoration: none;
   color: black;
+ 
 }
 .navLink:hover {
   color: black;
@@ -16,6 +17,11 @@
   border-radius: 20px
 }
 
+.imgLogo{
+  border-radius: 45%;
+  width:30px;
+ height:30px;
+}
 .active {
   font-weight: bold;
   background-color: rgb(238, 149, 162);
@@ -29,7 +35,7 @@
   transform: scale(1.5);
 }
 
-.widgetCantidad{
+.widgetQuantity{
   background-color: rgb(250, 32, 64);
   font-size: 1.5rem;
   font-weight: bold;

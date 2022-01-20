@@ -2,7 +2,7 @@ import './Loading.css'
 
 function Loading() {
     return (
-        <div className="preCarga">
+        <div className='preCarga'>
             
         </div>
     )

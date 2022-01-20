@@ -5,4 +5,10 @@
     border-radius: 10px;
     font-size: 1.3rem;
     font-weight: bold;
+    margin: 1rem;
+}
+
+.button:hover{
+    background: black;
+    color:lightpink;
 }
