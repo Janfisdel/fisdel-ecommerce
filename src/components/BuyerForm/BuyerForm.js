@@ -75,7 +75,7 @@ function BuyerForm() {
             </Link>
         
             {idOrder.length !== 0 && <> <p>Compra finalizada. La orden es {idOrder}</p>
-                                        <p><Link to="/" className="enlaceContinuar"> 
+                                        <p><Link to="/" className="continueLink"> 
                                              Realizar otra  compra
                                           </Link> 
                                         </p>
