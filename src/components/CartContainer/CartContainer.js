@@ -2,6 +2,7 @@ import { useCartContext } from '../../context/CartContext'
 import {Link} from 'react-router-dom'
 import Cart from '../Cart/Cart'
 import Button from '../Button/Button'
+import './CartContainer.css'
 
 function CartContainer() {
    const {cartList, deleteCart} =useCartContext() 
@@ -10,8 +11,8 @@ function CartContainer() {
         <div className ='container'>
             <h1>Carrito de compras</h1>      
             
-                 {cartList.length === 0 ? <><p>El carrito se encuentra vacio </p>
-                                            <Link to="/" className='continueLink'> Continuar comprando</Link>
+                 {cartList.length === 0 ? <><p className='emptyCart'>El carrito se encuentra vacío </p>
+                                            <Link to="/" className='continueLink'> <Button text='Continuar comprando' /></Link>
                                           </>
                                         :<> <Cart />
                                             <Link to="/buyerForm">
