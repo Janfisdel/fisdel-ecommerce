@@ -12,7 +12,7 @@ function CartContainer() {
             <h1>Carrito de compras</h1>      
             
                  {cartList.length === 0 ? <><p className='emptyCart'>El carrito se encuentra vacío </p>
-                                            <Link to="/" className='continueLink'> <Button text='Continuar comprando' /></Link>
+                                            <Link to="/"> <Button text='Continuar comprando' /></Link>
                                           </>
                                         :<> <Cart />
                                             <Link to="/buyerForm">
