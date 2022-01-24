@@ -13,7 +13,7 @@ function NotFound() {
                         </svg>
                   </h3>
 
-                  <p>Seguí disfrutando nuestra tienda en el siguiente botón</p>
+                  <p>Seguí disfrutando nuestra tienda en el siguiente enlace</p>
         
 
               <Link to="/">

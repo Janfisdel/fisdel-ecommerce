@@ -1,0 +1,15 @@
+.imgCart{
+    width: 4rem;
+    height: 4rem;
+ }
+
+ .deleteItem{
+    color:rgb(226, 135, 148);
+    width: 2rem;
+    height:2rem;
+  }
+  .deleteItem:hover {
+    color:rgba(0, 0, 0, 0.527);
+    background-color: lightpink;
+    border-radius: 25%;
+  }
