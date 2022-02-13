@@ -29,9 +29,13 @@ function ItemDetailContainer() {
         else{
             return (
                     <div className ='container'>
-                        <h1>Detalle de producto </h1>
+                        
                         {loading ? <Loading />
-                                 : <ItemDetail item={item}/>}
+                                 :  <>
+                                 <h1>{item.name} </h1>
+                                 <ItemDetail item={item}/>
+                                 </>
+                                 }
                     </div>
                     )
         }

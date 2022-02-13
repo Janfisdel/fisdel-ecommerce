@@ -16,11 +16,11 @@ function ItemDetail({item}) {
 
     return (
      <>  <div key={item.id}>
-            <h2>  {item.name}</h2>
+           
             <div className='divDetail'>
                 <img className='imgDetail' src={item.img} alt={item.alt} />
                 <div className='descriptionItem'>
-                         <p> Descripcion: {item.description}</p>
+                         <p>{item.description}</p>
                          <p>Precio: ${item.price}</p>
               
                         {goCart ? <ItemCount  stock ={item.stock} initial={1} onAdd={onAdd}/> 

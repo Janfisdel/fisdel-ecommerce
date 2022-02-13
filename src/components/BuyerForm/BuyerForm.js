@@ -71,7 +71,8 @@ function BuyerForm() {
             </form>
 
             
-            {idOrder.length !== 0 ? <div className='orderSuccess'> <h3>Gracias por elegirnos! </h3>
+            {idOrder.length !== 0 ? <div className='orderSuccess'> 
+                                        <h3>Gracias por elegirnos! </h3>
                                         <p>Compra realizada con exito. La orden es {idOrder}</p>
                                         <p><Link to="/"> 
                                              <Button text='Realizar otra compra' />
