@@ -32,7 +32,7 @@ function ItemDetailContainer() {
                         
                         {loading ? <Loading />
                                  :  <>
-                                 <h1>{item.name} </h1>
+                                 <h1 className='title'>{item.name} </h1>
                                  <ItemDetail item={item}/>
                                  </>
                                  }

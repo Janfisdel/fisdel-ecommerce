@@ -23,7 +23,7 @@ function ItemListContainer({greeting}) {
 
     return (
         <main className ='container'>
-            <h1>{greeting}</h1>
+            <h1 className='title'>{greeting}</h1>
             {loading ? <Loading />
                      : <ItemList products={products} />
             } 

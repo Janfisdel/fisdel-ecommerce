@@ -6,3 +6,7 @@
 .container{
   padding-top: 4rem;
 }
+
+.title{
+  text-transform: uppercase;
+}

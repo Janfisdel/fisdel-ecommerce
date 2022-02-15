@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 function NotFound() {
   return(
         <div className='container'>
-              <h2>ELEMENTO NO ENCONTRADO</h2>
+              <h2 className='title'>Elemento no encontrado</h2>
             
                   <h3>Ops! No tenemos es producto en nuestra tienda 
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-emoji-frown" viewBox="0 0 16 16">

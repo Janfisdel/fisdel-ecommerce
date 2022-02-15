@@ -9,7 +9,7 @@ function CartContainer() {
 
     return (
         <div className ='container'>
-            <h1>Carrito de compras</h1>      
+            <h1 className='title'>Carrito de compras</h1>      
             
                  {cartList.length === 0 ? <><p className='emptyCart'>El carrito se encuentra vacío </p>
                                             <Link to="/"> <Button text='Continuar comprando' /></Link>

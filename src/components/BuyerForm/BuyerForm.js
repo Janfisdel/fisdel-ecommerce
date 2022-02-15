@@ -46,7 +46,7 @@ function BuyerForm() {
    
     return (
         <div className ='container'>
-            <h1>Formulario de compra</h1>
+            <h1 className='title'>Formulario de compra</h1>
             
             <form className='form' onSubmit={generateOrder}>
               <label>Nombre completo:</label>
